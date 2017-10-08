@@ -1,0 +1,105 @@
++-------------------------------------------------------------------------+
+| NKSS: PL/SQL Simple Scheduler                                           |
+|-------------------------------------------------------------------------|
+| (c) Copyright 2017 Geraldo Viana (r4vrya@gmail.com)                     |
+|                                                                         |
+| Licensed under the Apache License, Version 2.0 (the "License"):         |
+| you may not use this file except in compliance with the License.        |
+| You may obtain a copy of the License at                                 |
+|                                                                         |
+|     http://www.apache.org/licenses/LICENSE-2.0                          |
+|                                                                         |
+| Unless required by applicable law or agreed to in writing, software     |
+| distributed under the License is distributed on an "AS IS" BASIS,       |
+| WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.|
+| See the License for the specific language governing permissions and     |
+| limitations under the License.                                          |
+|-------------------------------------------------------------------------|
+| SQL> @nkss-manager.sql                                                  |
++-------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+| setting host variables to hold data between statements                                           |
++--------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+| Create new set of tasks and schedule them to run                                                 |
++--------------------------------------------------------------------------------------------------+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.15
++--------------------------------------------------------------------------------------------------+
+| Wait 8 seconds to start monitoring tasks                                                         |
++--------------------------------------------------------------------------------------------------+
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:08.14
+
+STATUS       COUNT(*) MIN_RUN                    MAX_RUN
+---------- ---------- -------------------------- --------------------------
+scheduled         172
+success            20 +000000000 00:00:07.085046 +000000000 00:00:07.110039
+failure             8 +000000000 00:00:00.001318 +000000000 00:00:07.089186
+
+3 rows selected.
+
+Elapsed: 00:00:00.01
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:08.10
+
+STATUS       COUNT(*) MIN_RUN                    MAX_RUN
+---------- ---------- -------------------------- --------------------------
+scheduled         145
+success            42 +000000000 00:00:07.085046 +000000000 00:00:07.110039
+failure            13 +000000000 00:00:00.001318 +000000000 00:00:07.089186
+
+3 rows selected.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:08.11
+
+STATUS       COUNT(*) MIN_RUN                    MAX_RUN
+---------- ---------- -------------------------- --------------------------
+scheduled         115
+success            65 +000000000 00:00:07.085046 +000000000 00:00:07.110039
+failure            20 +000000000 00:00:00.001318 +000000000 00:00:07.089186
+
+3 rows selected.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:08.10
+
+STATUS       COUNT(*) MIN_RUN                    MAX_RUN
+---------- ---------- -------------------------- --------------------------
+success            90 +000000000 00:00:07.085046 +000000000 00:00:07.110039
+scheduled          86
+failure            24 +000000000 00:00:00.001318 +000000000 00:00:07.089186
+
+3 rows selected.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:08.11
+
+STATUS       COUNT(*) MIN_RUN                    MAX_RUN
+---------- ---------- -------------------------- --------------------------
+success           113 +000000000 00:00:07.085046 +000000000 00:00:07.110039
+scheduled          56
+failure            31 +000000000 00:00:00.001318 +000000000 00:00:07.092601
+
+3 rows selected.
+
+Elapsed: 00:00:00.00
++--------------------------------------------------------------------------------------------------+
+| EOS: End of script                                                                               |
++--------------------------------------------------------------------------------------------------+
