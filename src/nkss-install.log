@@ -1,0 +1,60 @@
++-------------------------------------------------------------------------+
+| NKSS: PL/SQL Simple Scheduler                                           |
++-------------------------------------------------------------------------+
+| (c) Copyright 2017 Geraldo Viana (r4vrya@gmail.com)                     |
+|                                                                         |
+| Licensed under the Apache License, Version 2.0 (the "License"):         |
+| you may not use this file except in compliance with the License.        |
+| You may obtain a copy of the License at                                 |
+|                                                                         |
+|     http://www.apache.org/licenses/LICENSE-2.0                          |
+|                                                                         |
+| Unless required by applicable law or agreed to in writing, software     |
+| distributed under the License is distributed on an "AS IS" BASIS,       |
+| WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.|
+| See the License for the specific language governing permissions and     |
+| limitations under the License.                                          |
++-------------------------------------------------------------------------+
+| SQL> @nkss-install.sql                                                  |
++-------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+| NKSS: Start of script                                                   |
++-------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+| NKSS: CREATE TABLES                                                     |
++-------------------------------------------------------------------------+
+Creating table: NKSS_TASKSET ...
+Creating table: NKSS_TASKLIST ...
++-------------------------------------------------------------------------+
+| NKSS: CREATE SEQUENCES                                                  |
++-------------------------------------------------------------------------+
+Creating sequence: NKSS_TASKSET_S ...
+Creating sequence: NKSS_TASKLIST_S ...
++-------------------------------------------------------------------------+
+| NKSS: Creating Package Specification                                    |
++-------------------------------------------------------------------------+
+Creating Package: NKSS_MANAGER ...
+No errors.
+Creating Package: NKSS_TASKLIST_DML ...
+No errors.
+Creating Package: NKSS_TASKSET_DML ...
+No errors.
+Creating Package: NKSS_WORKER ...
+No errors.
++-------------------------------------------------------------------------+
+| NKSS: Creating Package Implementation                                   |
++-------------------------------------------------------------------------+
+Creating Package Body: NKSS_MANAGER ...
+No errors.
+Creating Package Body: NKSS_TASKLIST_DML ...
+No errors.
+Creating Package Body: NKSS_TASKSET_DML ...
+No errors.
+Creating Package Body: NKSS_WORKER ...
+No errors.
++-------------------------------------------------------------------------+
+| NKSS: CREATE DBMS_SCHEDULER Program                                     |
++-------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+| NKSS: End of Script                                                     |
++-------------------------------------------------------------------------+
