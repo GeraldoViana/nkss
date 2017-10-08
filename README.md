@@ -6,3 +6,6 @@ I always prefer run my tests and production batch parallel processing directly f
 
 This very simple API can be used for any type of processing and workloads within the database.
 
+With more and more cores being added to processors nowadays, there's no excuse to write single  
+core batch programs anymore.
+
