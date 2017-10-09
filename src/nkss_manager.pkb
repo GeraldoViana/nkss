@@ -73,7 +73,8 @@ is
   is
     lc__    constant varchar2(100) := $$plsql_unit || '.ADD_TASK_PVT:';
     lr_setid         RecSetID;
-    lr_list          RecListData;
+    lr_task          RecListData;
+    lt_task          ArrListData;
     i                pls_integer := ft_payload.first;
   begin
     if (ft_payload.count > gc_limit) then
@@ -94,13 +95,14 @@ is
         if (ft_payload(i) is null or dbms_lob.getlength(ft_payload(i)) = 0) then
           raise_application_error(-20888, 'ft_payload(i) argument cannot be null:' || $$plsql_line);
         end if;
-        lr_list := null;
-        lr_list.pid := fv_setid;
-        lr_list.status := -1;
-        lr_list.payload := ft_payload(i);
-        nkss_tasklist_dml.insert_row(fr_data => lr_list);
+        lr_task := null;
+        lr_task.pid := fv_setid;
+        lr_task.status := -1;
+        lr_task.payload := ft_payload(i);
+        lt_task(i) := lr_task;
         i := ft_payload.next(i);
       end loop;
+     nkss_tasklist_dml.insert_all(ft_data => lt_task);
     end if;
   exception when others then
     raise_application_error(-20777, lc__ || $$plsql_line || nl || dbms_utility.format_error_stack);
