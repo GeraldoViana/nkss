@@ -117,7 +117,7 @@ begin
   :hv_setid := nkss_manager.new_taskset(fv_label   => 'Randomize between 0 and 100 until hit a multiple of 30',
                                         fv_payload => lc_set_payload);
   -- bulk 2 chunks of payloads
-  for x in 1 .. 100 loop
+  for x in 1 .. 2 loop
     lt_payload.delete;
     for y in 1 .. lc_limit loop
       lt_payload(y) := lc_task_payload;
