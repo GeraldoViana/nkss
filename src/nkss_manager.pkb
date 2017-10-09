@@ -202,7 +202,7 @@ is
       raise_application_error(-20888, 'fv_status argument is not valid:' || $$plsql_line);
     end if;
     lr_oldset.label := nvl(fv_label, lr_oldset.label);
-    lr_oldset.payload := nvl(fv_label, lr_oldset.payload);
+    lr_oldset.payload := nvl(fv_payload, lr_oldset.payload);
     lv_newsetid := new_taskset(fv_label   => lr_oldset.label,
                                fv_payload => lr_oldset.payload);
     nkss_tasklist_dml.reschedule(fv_oldsetid  => fv_setid,
