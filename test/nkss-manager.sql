@@ -93,7 +93,7 @@ declare
 ';
   lv_count pls_integer := 1;
 begin
-  -- run about 8 seconds or hit by a random number multiple of 27
+  -- run about 8 seconds or hit by a random number multiple of 30
   loop
     if (mod(ceil(dbms_random.value(0, 100)), 30) = 0) then
       raise_application_error(-20888, 'aowh! I was hit:' || $$plsql_line);
@@ -114,7 +114,7 @@ end main;
 begin
   dbms_output.enable(buffer_size => 1e6);
   -- new set of tasks
-  :hv_setid := nkss_manager.new_taskset(fv_label   => 'Randomize between 0 and 100 until hit a multiple of 27',
+  :hv_setid := nkss_manager.new_taskset(fv_label   => 'Randomize between 0 and 100 until hit a multiple of 30',
                                         fv_payload => lc_set_payload);
   -- bulk 2 chunks of payloads
   for x in 1 .. 2 loop
